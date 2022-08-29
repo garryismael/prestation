@@ -13,7 +13,6 @@ import mg.eni.prestation.repositories.TraitementRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class EntityFixture {
 
     private final PatientRepository patientRepository;
@@ -24,7 +23,8 @@ public class EntityFixture {
     List<Medecin> medecins = new ArrayList<>();
     List<Patient> patients = new ArrayList<>();
 
-    public EntityFixture(PatientRepository patientRepository, MedecinRepository medecinRepository, TraitementRepository traitementRepository,int number) {
+    public EntityFixture(PatientRepository patientRepository, MedecinRepository medecinRepository,
+            TraitementRepository traitementRepository, int number) {
         this.patientRepository = patientRepository;
         this.medecinRepository = medecinRepository;
         this.traitementRepository = traitementRepository;

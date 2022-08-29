@@ -1,9 +1,9 @@
 package mg.eni.prestation.utils.tests;
 
+import java.util.List;
+
 import lombok.Data;
 import mg.eni.prestation.models.Patient;
-
-import java.util.List;
 
 @Data
 public class MedecinPatient {
