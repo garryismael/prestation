@@ -1,5 +1,12 @@
 package mg.eni.prestation.config;
 
+import javax.ws.rs.ApplicationPath;
+
+import org.glassfish.jersey.server.ResourceConfig;
+import org.glassfish.jersey.server.ServerProperties;
+import org.glassfish.jersey.servlet.ServletProperties;
+import org.springframework.stereotype.Component;
+
 import io.swagger.jaxrs.config.BeanConfig;
 import io.swagger.jaxrs.listing.ApiListingResource;
 import io.swagger.jaxrs.listing.SwaggerSerializers;
@@ -8,12 +15,6 @@ import mg.eni.prestation.config.mappers.NotFoundMapper;
 import mg.eni.prestation.controllers.MedecinController;
 import mg.eni.prestation.controllers.PatientController;
 import mg.eni.prestation.controllers.TraitementController;
-import org.glassfish.jersey.server.ResourceConfig;
-import org.glassfish.jersey.server.ServerProperties;
-import org.glassfish.jersey.servlet.ServletProperties;
-import org.springframework.stereotype.Component;
-
-import javax.ws.rs.ApplicationPath;
 
 @Component
 @ApplicationPath("/api")
@@ -36,7 +37,7 @@ public class JerseyConfig extends ResourceConfig {
     public void configureSwagger() {
         this.register(ApiListingResource.class);
         this.register(SwaggerSerializers.class);
-        BeanConfig config = new BeanConfig();
+        final BeanConfig config = new BeanConfig();
         config.setConfigId("spring-jersey-swagger-example");
         config.setTitle("Prestation Swagger Docs");
         config.setVersion("2.0.0");

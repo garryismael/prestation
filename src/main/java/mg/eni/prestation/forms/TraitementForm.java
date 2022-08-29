@@ -1,13 +1,13 @@
 package mg.eni.prestation.forms;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 import lombok.Data;
 import mg.eni.prestation.models.Medecin;
 import mg.eni.prestation.models.MedecinPatient;
 import mg.eni.prestation.models.Patient;
 import mg.eni.prestation.models.Traitement;
-
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 
 @Data
 public class TraitementForm {

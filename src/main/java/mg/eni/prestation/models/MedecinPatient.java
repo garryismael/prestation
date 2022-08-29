@@ -1,8 +1,9 @@
 package mg.eni.prestation.models;
 
-import javax.persistence.Embeddable;
 import java.io.Serializable;
 import java.util.Objects;
+
+import javax.persistence.Embeddable;
 
 @Embeddable
 public class MedecinPatient implements Serializable {

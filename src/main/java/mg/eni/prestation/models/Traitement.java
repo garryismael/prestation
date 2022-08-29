@@ -1,10 +1,15 @@
 package mg.eni.prestation.models;
 
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import io.swagger.annotations.ApiModelProperty;
-
-import javax.persistence.*;
 
 @Entity
 public class Traitement {

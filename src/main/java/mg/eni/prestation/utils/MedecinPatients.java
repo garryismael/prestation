@@ -1,10 +1,10 @@
 package mg.eni.prestation.utils;
 
+import java.util.List;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import mg.eni.prestation.models.Medecin;
-
-import java.util.List;
 
 @Data
 @NoArgsConstructor
