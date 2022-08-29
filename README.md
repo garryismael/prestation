@@ -1,6 +1,6 @@
 # Prestation Project
 
-## Initilalisation de notre projet
+## Initialisation de notre projet
 
 1. Installer Java, Maven et Postgresql
 2. Créer une base de données avec le nom prestation
