@@ -2,7 +2,7 @@
 
 ## Initialisation de notre projet
 
-1. Installer Java, Maven et Postgresql
+1. Installer Java Version 17, Maven et Postgresql
 2. Créer une base de données avec le nom prestation
 3. Changer la propriété name and password de Postgresql avec les votres dans le fichier src\main\resources\application.properties
 4. Dans la dossier /prestation, executer cette commande ```mvn clean install``` pour builder les jars
