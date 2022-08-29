@@ -1,15 +1,14 @@
 package mg.eni.prestation.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import lombok.Getter;
-import lombok.Setter;
+
+import io.swagger.annotations.ApiModelProperty;
 
 import javax.persistence.*;
 
 @Entity
-@Getter
-@Setter
 public class Traitement {
+    @ApiModelProperty(hidden = true)
     @EmbeddedId
     @JsonBackReference
     private MedecinPatient id = new MedecinPatient();
@@ -26,6 +25,40 @@ public class Traitement {
 
     @Column(nullable = false)
     private int nombreDeJour;
+
+    @ApiModelProperty(hidden = true)
+    public MedecinPatient getId() {
+        return id;
+    }
+
+    @ApiModelProperty(hidden = true)
+    public void setId(MedecinPatient id) {
+        this.id = id;
+    }
+
+    public Medecin getMedecin() {
+        return medecin;
+    }
+
+    public void setMedecin(Medecin medecin) {
+        this.medecin = medecin;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+
+    public int getNombreDeJour() {
+        return nombreDeJour;
+    }
+
+    public void setNombreDeJour(int nombreDeJour) {
+        this.nombreDeJour = nombreDeJour;
+    }
 
     public Traitement setField(MedecinPatient id, Medecin medecin, Patient patient, int nombreDeJour) {
         this.id = id;

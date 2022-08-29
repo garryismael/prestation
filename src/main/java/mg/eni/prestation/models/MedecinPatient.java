@@ -1,20 +1,38 @@
 package mg.eni.prestation.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.Embeddable;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class MedecinPatient implements Serializable {
     private int medecin;
     private int patient;
+
+    public MedecinPatient() {
+    }
+
+    public MedecinPatient(int medecin, int patient) {
+        this.medecin = medecin;
+        this.patient = patient;
+    }
+
+    public int getMedecin() {
+        return medecin;
+    }
+
+    public void setMedecin(int medecin) {
+        this.medecin = medecin;
+    }
+
+    public int getPatient() {
+        return patient;
+    }
+
+    public void setPatient(int patient) {
+        this.patient = patient;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -26,6 +44,7 @@ public class MedecinPatient implements Serializable {
         MedecinPatient ids = (MedecinPatient) o;
         return medecin == ids.getMedecin() && patient == ids.getPatient();
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(medecin, patient);
