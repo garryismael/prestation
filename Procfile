@@ -1,0 +1,1 @@
+api: java -jar target/prestation.jar
