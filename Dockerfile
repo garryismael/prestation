@@ -17,11 +17,12 @@ RUN mvn clean install
 FROM openjdk:17-jdk-slim
  
 MAINTAINER Jonas Hecht
- 
-VOLUME /tmp
- 
+
+# set work directory
+WORKDIR /usr/src/prestation
+
 # Add Spring Boot app.jar to Container
-COPY --from=0 "target/prestation-api.jar" app.jar
+COPY target/prestation-api.jar .
  
 # Fire up our Spring Boot app by default
 CMD [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
