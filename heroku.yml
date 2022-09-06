@@ -1,4 +1,0 @@
-build:
-  docker:
-    api: 
-      dockerfile: Dockerfile

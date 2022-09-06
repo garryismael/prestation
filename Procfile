@@ -1,1 +1,1 @@
-api: java -jar target/prestation.jar
+api: java -jar prestation-api.jar
