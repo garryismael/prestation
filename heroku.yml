@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: java -jar prestation-api.jar
+  web: java -jar ./prestation-api.jar
